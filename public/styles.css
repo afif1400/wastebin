@@ -76,7 +76,6 @@ textarea {
 .btn {
   cursor: pointer;
   background: none;
-  border: 1px solid #1d2021;
   color: #1d2021;
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
@@ -85,6 +84,11 @@ textarea {
   text-decoration: none;
 }
 
-.btn:hover {
-  background-color: #4d5357;
+.btn > img {
+  background: transparent;
+  width: 35px;
+}
+
+button.btn {
+  border: none;
 }

@@ -1,11 +1,17 @@
 <div class="buttons-wrapper">
   <a href="/" class="logo">WasteBin</a>
   <div class="buttons">
-    <a href="/new" class="btn">New</a>
+    <a href="/new" class="btn">
+      <img src="/images/new-document.png" />
+    </a>
     <% if (locals.canSave) { %>
-    <button class="btn" type="submit">save</button>
+    <button class="btn" type="submit">
+      <img src="/images/diskette.png" />
+    </button>
     <% } %> <% if (locals.id != null) { %>
-    <a href="<%= locals.id %>/duplicate" class="btn">Duplicate</a>
+    <a href="/<%= locals.id %>/duplicate" class="btn">
+      <img src="images/paste.png"
+    /></a>
     <% } %>
   </div>
 </div>

@@ -44,7 +44,7 @@ app.get("/:id/duplicate", async (req, res) => {
   try {
     const document = await Document.findById(id);
 
-    res.render("new", { code: document.value });
+    res.render("new", { value: document.value });
   } catch (error) {
     res.redirect(`${id}`);
   }
