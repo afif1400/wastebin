@@ -17,8 +17,6 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT | 3000;
-
 app.get("/", (req, res) => {
   const code = `Welcome to WasteBin!
 
@@ -63,6 +61,6 @@ app.get("/:id", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`server is running on port ${PORT}`);
 });
