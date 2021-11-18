@@ -37,6 +37,7 @@ app.post("/save", async (req, res) => {
     const document = await Document.create({ value });
     res.redirect(`/${document.id}`);
   } catch (error) {
+    console.log(error);
     res.render("new", value);
   }
 });
@@ -48,6 +49,7 @@ app.get("/:id/duplicate", async (req, res) => {
 
     res.render("new", { value: document.value });
   } catch (error) {
+    console.log(error);
     res.redirect(`${id}`);
   }
 });
@@ -59,6 +61,7 @@ app.get("/:id", async (req, res) => {
 
     res.render("code-display", { code: document.value, id });
   } catch (error) {
+    console.log(error);
     res.redirect("/");
   }
 });
